@@ -67,6 +67,12 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
     message: "Logged Out",
   });
 });
+exports.usertest = catchAsyncErrors(async (req, res, next) => {
+  res.status(200).json({
+    success: true,
+    message: "Logged Out",
+  });
+});
 
 // Forgot Password
 exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
