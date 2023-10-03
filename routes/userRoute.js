@@ -12,8 +12,7 @@ const {
   getSingleUser,
   updateUserRole,
   deleteUser,
-  usertest
-} = require("../controllers/userController");
+  usertest} = require("../controllers/userController");
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 
 const router = express.Router();
