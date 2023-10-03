@@ -69,16 +69,16 @@ exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
   try {
     
     const products = await Product.find();
+    res.status(200).json({
+      success: true,
+      products,
+    });
   } catch (error) {
   res.status(200).json({
     "error": error,
   });
   }
 
-  res.status(200).json({
-    success: true,
-    products,
-  });
 });
 
 // Get Product Details
