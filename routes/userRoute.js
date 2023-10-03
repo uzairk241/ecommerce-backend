@@ -18,6 +18,9 @@ const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 const router = express.Router();
 
 router.route("/register").post(registerUser);
+router.route("/user").post((req,res)=>{
+  res.status(200).json({"message":"hello"})
+});
 
 router.route("/login").post(loginUser);
 
