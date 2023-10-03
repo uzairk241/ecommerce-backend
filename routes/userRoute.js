@@ -19,9 +19,8 @@ const router = express.Router();
 
 router.route("/register").post(registerUser);
 
-router.route("/user").post(async(res,res)=>{
+router.route("/user").post(async(req,res)=>{
   res.status(200).json({"message":"hello"})
-
 });
 
 router.route("/login").post(loginUser);
